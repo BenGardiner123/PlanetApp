@@ -7,6 +7,8 @@ import { Planet } from "./planet"
 })
 export class PlanetsService {
 
+  
+
   planets: Planet[] = [
     new Planet ("Sun", 0, 0),
     new Planet ("Mercury", 0, 57.9),
@@ -23,15 +25,15 @@ export class PlanetsService {
 
   constructor() { }
 
-  showPlanets:boolean = true;
+  
+  
+///is this the same as create planet?
+ /*  addPlanet(){
 
-
-  addPlanet(){
-
-  }
+  } */
 
   distanceSortSun(){
-
+    this.planets.sort((a, b) => (a.distancefromSun < b.distancefromSun) ? -1: 1);
   }
 
   createPlanet(planet: Planet){

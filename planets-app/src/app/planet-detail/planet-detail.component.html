@@ -1,1 +1,3 @@
-<
+<div >
+    <app-planets-list *ngFor="let planet of planetService; index as i; trackBy: planetService.distanceSortSun()" [planet] = "planet"></app-planets-list>
+</div>

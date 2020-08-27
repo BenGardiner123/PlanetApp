@@ -14,8 +14,7 @@ export class PlanetsCreateComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createPlanet(name: string){
-    this.planetService.createPlanet(new Planet())
+  createPlanet(name: string, moons:number, distToSun:number){
+    this.planetService.createPlanet(new Planet(name, moons, distToSun))
   }
 }
-// add theextra input feild to corresend down here

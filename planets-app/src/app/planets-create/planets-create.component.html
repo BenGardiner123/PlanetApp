@@ -1,7 +1,8 @@
-<h1>Create a planet</h1>
+<h1>Create a new planet here</h1>
 <input type="name" #name />
+<input type="moons" #moons />
 <input type="dist" #distToSun />
-<input type="name" #name />
-<button (click)="createPlanet(name.value)">Press here to create a planet</button>
+
+<button (click)="createPlanet(name.value, moons.value, distToSun.values)">Press here to create a planet</button>
 
 <!-- need to add the extra feild that correspond to the class -->

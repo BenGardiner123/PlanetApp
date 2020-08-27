@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./planets-list.component.css']
 })
 export class PlanetsListComponent implements OnInit {
+  
+  
 
-  constructor(public planetService: PlanetsService) { }
+  constructor(public planetservice: PlanetsService) { 
+    
+  }
 
   ngOnInit(): void {
   }
