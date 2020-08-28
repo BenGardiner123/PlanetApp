@@ -37,9 +37,7 @@ export class PlanetsService {
   }
 
   createPlanet(planet: Planet){
-    
     this.planets.push(planet);
-    
   }
 
   //delete sun needs to go in here

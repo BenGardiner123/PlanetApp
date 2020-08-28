@@ -1,5 +1,7 @@
-import { PlanetsService } from './../planets.service';
+import { PlanetDetailComponent } from './../planet-detail/planet-detail.component';
+import { PlanetsService } from '../planets.service';
 import { Component, OnInit } from '@angular/core';
+
 
 
 @Component({
@@ -9,16 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanetsListComponent implements OnInit {
   
-  
+  planetService: PlanetsService;
 
   constructor(public planetservice: PlanetsService) { 
-    
+    this.planetService = planetservice;
   }
 
   ngOnInit(): void {
   }
 
-  // this will show every compnent of evry plane tas part of the service
+  
   
 
 }

@@ -1,3 +1,4 @@
+import { PlanetsService } from './planets.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -16,7 +17,10 @@ import { PlanetsCreateComponent } from './planets-create/planets-create.componen
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    PlanetsService
+  ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
