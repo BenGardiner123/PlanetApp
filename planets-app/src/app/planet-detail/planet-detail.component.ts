@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Planet } from '../planet';
+import { PlanetsService } from '../planets.service';
 
 
 //add the service here to delete the planet
@@ -14,8 +15,8 @@ export class PlanetDetailComponent implements OnInit {
 @Input()
 planet: Planet;
 
-constructor(planet: Planet) { 
-  this.planet = planet;
+constructor(public planetService: PlanetsService) { 
+  
 }
 
 ngOnInit(): void {

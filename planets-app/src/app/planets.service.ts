@@ -27,18 +27,13 @@ export class PlanetsService {
 
   
   
-///is this the same as create planet?
- /*  addPlanet(){
-
-  } */
-
-  distanceSortSun(){
-    this.planets.sort((a, b) => (a.distancefromSun < b.distancefromSun) ? -1: 1);
-  }
 
   createPlanet(planet: Planet){
     this.planets.push(planet);
+    this.planets.sort((a, b) => (a.distancefromSun < b.distancefromSun) ? -1: 1);
   }
 
-  //delete sun needs to go in here
+  // delete planet() here
+
+  
 }

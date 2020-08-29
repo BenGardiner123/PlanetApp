@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "planets-app"
+    }
+  },
+  "defaultProject": "planets-app",
+  "cli": {
+    "analytics": false
+  }
 }
