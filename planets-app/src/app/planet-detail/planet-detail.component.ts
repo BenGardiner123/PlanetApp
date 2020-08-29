@@ -3,7 +3,7 @@ import { Planet } from '../planet';
 import { PlanetsService } from '../planets.service';
 
 
-//add the service here to delete the planet
+
 
 @Component({
   selector: 'app-planet-detail',
@@ -22,9 +22,9 @@ constructor(public planetService: PlanetsService) {
 ngOnInit(): void {
 }
 
-  
-  // need to add a delete planet into this htrough the service
-
-  // add edit the values of each planet
+deletePlanet(planet: Planet){{
+  this.planetService.deletePlanet(planet);
+}}
+ 
 
 }

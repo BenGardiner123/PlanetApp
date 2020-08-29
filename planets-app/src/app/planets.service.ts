@@ -25,15 +25,16 @@ export class PlanetsService {
 
   constructor() { }
 
-  
-  
 
   createPlanet(planet: Planet){
     this.planets.push(planet);
     this.planets.sort((a, b) => (a.distancefromSun < b.distancefromSun) ? -1: 1);
   }
 
-  // delete planet() here
+  deletePlanet(planet: Planet){
+    let thisPlanettoRemove = this.planets.indexOf(planet)
+    this.planets.splice(thisPlanettoRemove, 1)
+  }
 
   
 }

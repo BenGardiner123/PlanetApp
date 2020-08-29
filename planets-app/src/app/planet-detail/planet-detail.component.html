@@ -1,2 +1,15 @@
-<p>{{planet.name}}</p>
-<p>{{planet.distancefromSun}} </p>
+<div (click)="deletePlanet(planet)">
+    <div>
+        <p>{{planet.name}}</p>   
+    </div>
+
+    <div>
+        <p>{{planet.moons}}</p>  
+    </div>
+
+    <div>
+        <p>{{planet.distancefromSun}} </p>
+    </div>
+</div>
+
+
