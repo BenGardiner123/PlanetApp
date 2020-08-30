@@ -25,6 +25,10 @@ export class PlanetsService {
 
   constructor() { }
 
+  sortPlanets(){
+    this.planets.sort((a, b) => (a.distancefromSun < b.distancefromSun) ? -1: 1);
+  }
+
 
   createPlanet(planet: Planet){
     this.planets.push(planet);

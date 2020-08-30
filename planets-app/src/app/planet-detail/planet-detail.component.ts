@@ -22,9 +22,23 @@ constructor(public planetService: PlanetsService) {
 ngOnInit(): void {
 }
 
-deletePlanet(planet: Planet){{
+deletePlanet(planet: Planet){
   this.planetService.deletePlanet(planet);
-}}
+}
  
+updatePlanetName($event: Event ){
+  this.planet.name = (<HTMLInputElement>event.target).value;
+} 
+
+updatePlanetMoons($event: Event ){
+  var input = parseInt((<HTMLInputElement>event.target).value);
+  this.planet.moons = input;
+}
+
+updatePlanetDist($event: Event ){
+  var input = parseInt((<HTMLInputElement>event.target).value);
+  this.planet.distancefromSun = input;
+ 
+}
 
 }
