@@ -1,20 +1,19 @@
-
 <div class="container">
     <div class="planetName">
-        <input (keyup)="updatePlanetName($event)" type="text" placeholder="Set Name">  
+        <!-- <input (keyup)="updatePlanetName($event)" type="text" placeholder="Set Name"> -->  
         <p>{{planet.name}}</p>
     </div>
 
     <div class="planetMoons">
-        <input (keyup)="updatePlanetMoons($event)" type="text" placeholder="Set Moons"> 
+        <!-- <input (keyup)="updatePlanetMoons($event)" type="text" placeholder="Set Moons">  -->
         <p>{{planet.moons}}</p>  
     </div>
 
     <div class="planetDist"> 
-        <input (keyup)="updatePlanetDist($event)" type="text" placeholder="Set Dist"> 
+        <!-- <input (keyup)="updatePlanetDist($event)" type="text" placeholder="Set Dist">  -->
         <p>{{planet.distancefromSun}}</p>
     </div>
-    <button (click)="deletePlanet(planet)">Delete this planet</button>
+    <button id="del" (click)="deletePlanet(planet)"> - </button>
 </div>
 
 
