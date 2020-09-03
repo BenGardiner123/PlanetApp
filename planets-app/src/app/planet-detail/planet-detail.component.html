@@ -1,19 +1,18 @@
 <div class="container">
-    <div class="planetName">
-        <!-- <input (keyup)="updatePlanetName($event)" type="text" placeholder="Set Name"> -->  
-        <p>{{planet.name}}</p>
-    </div>
+        
+        <p #name (click)="selectName()">{{planet.name}}</p>
 
-    <div class="planetMoons">
-        <!-- <input (keyup)="updatePlanetMoons($event)" type="text" placeholder="Set Moons">  -->
-        <p>{{planet.moons}}</p>  
-    </div>
+        <p #moons (click)="selectMoons()">{{planet.moons}}</p>  
+       
+        <p #dist (click)="selectDist()">{{planet.distancefromSun}}</p>
 
-    <div class="planetDist"> 
-        <!-- <input (keyup)="updatePlanetDist($event)" type="text" placeholder="Set Dist">  -->
-        <p>{{planet.distancefromSun}}</p>
-    </div>
-    <button id="del" (click)="deletePlanet(planet)"> - </button>
+        <a *ngIf="!editing" href="#" (click)="beginEdit()">Edit</a>
+        <a *ngIf="editing" href="#" (click)="stopEdit(updatePlanetInfo.value)">Sabe</a>
+
+    <button id="del" (click)="deletePlanet(planet)"> Del </button>
+    <input #updatePlanetInfo type="text" [value]="placeholder">
+
 </div>
 
 
+<!-- <input (keyup)="updatePlanetDist($event)" type="text" placeholder="Set Dist">  -->
