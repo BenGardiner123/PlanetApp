@@ -3,13 +3,13 @@ import { Planet } from '../planet';
 import { PlanetsService } from '../planets.service';
 
 
-
-
 @Component({
   selector: 'app-planet-detail',
   templateUrl: './planet-detail.component.html',
   styleUrls: ['./planet-detail.component.css']
 })
+
+
 export class PlanetDetailComponent implements OnInit {
 
 @Input()
@@ -22,7 +22,6 @@ distHolder: number;
 editingfield: string;
 
 constructor(public planetService: PlanetsService) { 
-  
 }
 
 ngOnInit(): void {
@@ -36,6 +35,7 @@ selectName(){
 }
 selectMoons(){
   let moons = 0;
+  this.editingfield = "moons";
   this.editing = true;
   moons = this.planet.moons;
   this.placeholder = moons.toString()
@@ -44,6 +44,7 @@ selectMoons(){
 
 selectDist(){
   let dist = 0;
+  this.editingfield = "dist";
   this.editing = true;
   dist = this.planet.distancefromSun;
   this.placeholder = dist.toString();
@@ -62,8 +63,21 @@ beginEdit(){
 stopEdit(value:string){
   if(this.editingfield == "name")
   {
-    this.planet.name  = this.placeholder
+    this.planet.name = value;
+    ///then need toclear the input box
+    this.placeholder = ""
   }
+  else if(this.editingfield == 'moons')
+  {
+    this.planet.moons = parseInt(value);
+    this.placeholder = ""
+  }
+  else if(this.editingfield == 'dist')
+  {
+    this.planet.distancefromSun = parseInt(value);
+    this.placeholder = ""
+  }
+
   this.editing = false;
 }
 

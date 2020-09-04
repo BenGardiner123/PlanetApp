@@ -16,5 +16,6 @@ export class PlanetsCreateComponent implements OnInit {
 
   createPlanet(name: string, moons:number, distToSun:number){
     this.planetService.createPlanet(new Planet(name, moons, distToSun));
+    
   }
 }
