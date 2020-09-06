@@ -5,6 +5,7 @@
         <p #moons (click)="selectMoons()">{{planet.moons}}</p>  
         <p id="info">Dist to Sun</p>
         <p #dist (click)="selectDist()">{{planet.distancefromSun}}</p>
+        
         <p id="info">Planet editing controls</p>
         <a id="editButton" *ngIf="!editing" href="#" (click)="beginEdit()">Edit</a>
         <a *ngIf="editing" href="#" (click)="stopEdit(updatePlanetInfo.value)">Sabe</a>
