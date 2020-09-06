@@ -10,16 +10,16 @@ export class PlanetsService {
   
 
   planets: Planet[] = [
-    new Planet ("Sun", 0, 0),
-    new Planet ("Mercury", 0, 57.9),
-    new Planet ("Venus", 0, 108.2),
-    new Planet ("Earth", 0, 149.6),
-    new Planet ("Mars", 0, 227.9),
-    new Planet ("Jupiter", 0, 778.3),
-    new Planet ("Saturn", 0, 1427.0),
-    new Planet ("Uranus", 0, 2871.0),
-    new Planet ("Neptune", 0, 4497.1),
-    new Planet ("Pluto", 0, 5913.0),
+    new Planet ("Sun", 0, 0, "https://i.ibb.co/V9rf0QT/theSun.jpg"),
+    new Planet ("Mercury", 0, 57.9, "https://i.ibb.co/phDJdnq/Mercury.jpg"),
+    new Planet ("Venus", 0, 108.2, "https://i.ibb.co/WPn6zcr/venus.jpg"),
+    new Planet ("Earth", 1, 149.6, "https://i.ibb.co/4ZJwJr7/earth.jpg"),
+    new Planet ("Mars", 2, 227.9, "https://i.ibb.co/0KdBp7x/Mars.jpg"),
+    new Planet ("Jupiter", 79, 778.3, "https://i.ibb.co/5sfytsm/Jupiter.jpg"),
+    new Planet ("Saturn", 53, 1427.0, "https://i.ibb.co/dMcsbXw/Saturn.jpg"),
+    new Planet ("Uranus", 27, 2871.0, "https://i.ibb.co/XXn61tK/Uranus.jpg"),
+    new Planet ("Neptune", 14, 4497.1, "https://i.ibb.co/tXtZ4RV/Neptune.jpg"),
+    new Planet ("Pluto", 5, 5913.0, "https://i.ibb.co/58kBPrS/Pluto.jpg"),
   ]
   
 
